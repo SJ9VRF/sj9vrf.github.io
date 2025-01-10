@@ -79,8 +79,8 @@ body {
 
 .mini-bio-container {
     display: flex;
-    flex-direction: row; /* Aligns image and content side by side */
-    align-items: start; /* Aligns items at the top */
+    flex-direction: column; /* Stacks content vertically within the container */
+    align-items: center; /* Aligns children in the center */
     background-color: #444;
     padding: 20px;
     border-radius: 8px;
@@ -88,7 +88,7 @@ body {
     width: 90%; /* Adjustable width */
     max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
     margin-top: 20px;
-    text-align: left; /* Aligns text to the left */
+    text-align: center; /* Aligns text centrally */
 }
 
 .mini-profile-img {
@@ -96,31 +96,30 @@ body {
     height: 100px;
     border-radius: 50%;
     border: 3px solid #fff;
-    margin-right: 20px; /* Adds spacing between the image and text */
+    margin-bottom: 20px; /* Space between image and content */
 }
 
-.mini-bio-container > div {
-    display: flex;
-    flex-direction: column; /* Stacks content vertically */
-    width: calc(100% - 120px); /* Adjusts width minus the image and margin */
+.mini-bio-container .content {
+    width: 100%; /* Ensures content fills the container */
 }
 
 .links {
-    text-align: center; /* Centers the link within its block */
-    margin-top: 10px; /* Adds space above the link */
+    width: 100%; /* Ensures link block fills the container */
+    margin-top: 10px; /* Space between text content and link */
+    font-size: 14px; /* Smaller font size for the links */
 }
 
 .links a {
     text-decoration: none; /* No underline */
     color: #aaa; /* Link color */
-    font-size: 14px; /* Smaller font size */
-    display: inline-block; /* Ensures the link is centered */
+    display: block; /* Link takes the full width of its container */
 }
 
 .links a:hover {
     text-decoration: underline; /* Underline on hover */
     color: #ddd; /* Link hover color */
 }
+
 
 
 @media (min-width: 768px) {
