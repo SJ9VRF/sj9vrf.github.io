@@ -22,51 +22,49 @@ body {
 }
 
 .profile-img, .mini-profile-img {
-    width: 45%; /* Adjusted width to maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; /* Fixed width to maintain layout consistency */
+    height: 100px; /* Maintains aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
     margin-bottom: 10px;
 }
 
 .mini-profile-img {
-    width: 20%; /* Consistent size */
-    height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Circular shape */
-    display: inline-block; /* Keeps image inline with text */
-    vertical-align: top; /* Align top with the text */
+    display: block; /* Alters display for better control */
+    margin: auto; /* Centers image within its container */
 }
 
 .mini-bio-container {
-    display: flex; /* Flex container for better alignment */
-    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center; /* Centers items horizontally in the container */
+    text-align: left; /* Aligns text to the left */
+    margin-bottom: 20px; /* Adds space between each item container */
 }
 
 .mini-bio-container div {
-    display: block; /* Stacking for text block */
-    width: 70%; /* Text block width */
-    padding: 10px; /* Padding for text block */
-    text-align: justify; /* Justifies text for even alignment */
+    width: 100%; /* Utilizes full width for text alignment */
 }
 
 .mini-bio-container h3, .mini-bio-container p {
-    font-size: 14px; /* Readable font size */
-    margin: 5px 0; /* Margin for spacing */
+    text-align: justify; /* Justifies text to fill each line */
+    font-size: 14px;
+    margin-top: 0; /* Reduces space above the heading */
+    margin-bottom: 5px; /* Manages space below the heading */
 }
 
 .bio-text p, .mini-bio-container p {
-    text-align: justify; /* Applies full justification to all paragraphs */
-    hyphens: auto; /* Automatically adds hyphens where necessary */
+    hyphens: auto; /* Automatically adds hyphens for better text breaking */
+    margin: 10px 0; /* Adds vertical spacing */
 }
 
 .links a {
     display: block; /* Each link on a new line */
-    margin-bottom: 10px; /* Space between links */
     text-decoration: none; /* No underline */
     color: #aaa; /* Link color */
     font-size: 18px; /* Size of the link text */
+    margin-bottom: 10px; /* Space between links */
 }
 
 .links a:hover {
@@ -75,17 +73,17 @@ body {
 }
 
 @media (min-width: 768px) {
-    .mini-profile-img {
-        width: 75px; /* Fixed width on larger screens */
-        height: 75px; /* Fixed height on larger screens */
+    .mini-bio-container {
+        flex-direction: row; /* Lays out items horizontally on larger screens */
+        align-items: start; /* Aligns items to the top of the container */
     }
 
-    .mini-bio-container {
-        justify-content: flex-start; /* Align items to the start */
+    .mini-profile-img {
+        margin-right: 20px; /* Adds right margin for spacing between image and text */
     }
 
     .mini-bio-container div {
-        width: calc(100% - 85px); /* Adjust width accounting for image */
+        width: 80%; /* Adjusts text block width when side by side with the image */
     }
 
     .links a {
