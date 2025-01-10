@@ -22,56 +22,67 @@ body {
 }
 
 .profile-img, .mini-profile-img {
-    width: 50%; /* Responsive width */
+    width: 100%; /* Full width to parent container size */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
     margin-bottom: 10px;
-    display: block; /* Center align images */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .mini-profile-img {
-    width: 20%; /* Smaller on smaller screens */
-    height: auto;
-    border-radius: 20%;
-    margin-right: 10px; /* Space between the image and the text */
+    width: 20%; /* Consistent size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular shape */
+    display: inline-block; /* Keeps image inline with text */
+    vertical-align: top; /* Align top with the text */
+}
+
+.mini-bio-container {
+    display: flex; /* Flex container for better alignment */
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 .mini-bio-container div {
-    display: block; /* Stack on small screens */
-    width: 100%; /* Full width */
+    display: block; /* Stacking for text block */
+    width: 70%; /* Text block width */
 }
 
 .mini-bio-container h3, .mini-bio-container p {
-    font-size: 16px; /* Larger font size for readability */
+    font-size: 16px; /* Readable font size */
+    margin: 5px 0; /* Margin for spacing */
 }
 
 .links a {
     display: block; /* Each link on a new line */
     margin-bottom: 10px; /* Space between links */
+    text-decoration: none; /* No underline */
+    color: #aaa; /* Link color */
+    font-size: 18px; /* Size of the link text */
+}
+
+.links a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #ddd; /* Link hover color */
 }
 
 @media (min-width: 768px) {
-    .mini-bio-container div {
-        display: inline-block; /* Inline-block on larger screens */
-        vertical-align: top;
-        width: 75%; /* Adjust width next to image */
-    }
-
     .mini-profile-img {
-        width: 75px; /* Fixed size on larger screens */
-        height: 75px;
+        width: 75px; /* Fixed width on larger screens */
+        height: 75px; /* Fixed height on larger screens */
     }
 
-    .bio-container, .mini-bio-container {
-        padding: 40px;
+    .mini-bio-container {
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .mini-bio-container div {
+        width: calc(100% - 85px); /* Adjust width accounting for image */
     }
 
     .links a {
-        display: inline; /* Links inline on larger screens */
-        margin: 0 10px; /* Space between links */
+        display: inline; /* Inline links on larger screens */
+        margin-right: 10px; /* Space between links */
     }
 }
-
