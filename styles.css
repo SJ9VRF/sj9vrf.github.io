@@ -16,100 +16,64 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     text-align: center;
-    width: 90%; /* Adjustable width */
+    width: 90%;
     margin-top: 20px;
-    max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
+    max-width: 600px;
 }
 
 .profile-img, .mini-profile-img {
-    width: 250px; /* Fixed width to maintain layout consistency */
-    height: 250px; /* Maintains aspect ratio */
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid #fff;
     margin-bottom: 10px;
-}
-
-.mini-profile-img {
-    width: 100px; /* Fixed width to maintain layout consistency */
-    height: 100px; /* Maintains aspect ratio */
-    border-radius: 20%; /* Circular shape */
-    border: 2px solid #fff;
-    display: block; /* Alters display for better control */
-    margin: auto; /* Centers image within its container */
-}
-
-.mini-bio-container {
-    display: flex;
-    flex-direction: column; /* Stacks image and text vertically */
-    align-items: center; /* Centers items horizontally in the container */
-    text-align: left; /* Aligns text to the left */
-    margin-bottom: 20px; /* Adds space between each item container */
-}
-
-.mini-bio-container div {
-    width: 100%; /* Utilizes full width for text alignment */
-}
-
-.mini-bio-container h3, .mini-bio-container p {
-    text-align: justify; /* Justifies text to fill each line */
-    font-size: 14px;
-    margin-top: 0; /* Reduces space above the heading */
-    margin-bottom: 5px; /* Manages space below the heading */
-}
-
-.bio-text p, .mini-bio-container p {
-    hyphens: auto; /* Automatically adds hyphens for better text breaking */
-    margin: 10px 0; /* Adds vertical spacing */
-}
-
-.links a {
-    display: block; /* Each link on a new line */
-    text-decoration: none; /* No underline */
-    color: #aaa; /* Link color */
-    font-size: 18px; /* Size of the link text */
-    margin-bottom: 10px; /* Space between links */
-}
-
-.links a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #ddd; /* Link hover color */
-}
-
-
-
-.mini-bio-container {
-    display: flex;
-    flex-direction: column; /* Keeps stacking vertically on all screens */
-    align-items: center;
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    width: 90%;
-    max-width: 600px;
-    margin-top: 20px;
-    text-align: center;
 }
 
 .mini-profile-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #fff;
-    margin-bottom: 10px;
+    border: 2px solid #fff;
+    margin: auto;
+    display: block;
+}
+
+.mini-bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.mini-bio-container div {
+    width: 100%;
+}
+
+.mini-bio-container h3, .mini-bio-container p {
+    text-align: justify;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.bio-text p, .mini-bio-container p {
+    hyphens: auto;
+    margin: 10px 0;
 }
 
 .links {
-    width: 100%; /* Ensures link section takes full width */
-    text-align: center; /* Centers the links */
-    margin-top: auto; /* Pushes the links to the bottom */
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Forces the links to the bottom */
 }
 
 .links a {
+    display: block;
     text-decoration: none;
     color: #aaa;
-    font-size: 14px;
-    display: block; /* Ensures each link is on a new line */
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .links a:hover {
@@ -119,27 +83,20 @@ body {
 
 @media (min-width: 768px) {
     .mini-bio-container {
-        flex-direction: row; /* Layout changes to horizontal on larger screens */
+        flex-direction: row;
         align-items: start;
     }
 
     .mini-profile-img {
-        margin-right: 20px; /* Space between image and text content */
+        margin-right: 20px;
     }
 
-    .mini-bio-container > div {
-        width: 80%; /* Adjust text width when horizontal */
-    }
-
-    .links {
-        width: 100%; /* Keeps link section width consistent */
-        margin-top: 0; /* Removes additional top margin on larger screens */
+    .mini-bio-container div {
+        width: 80%;
     }
 
     .links a {
-        display: inline; /* Inline display for horizontal layout */
-        margin-right: 10px; /* Space between inline links */
+        display: inline;
+        margin-right: 10px;
     }
 }
-
-
