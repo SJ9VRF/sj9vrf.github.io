@@ -19,10 +19,11 @@ body {
     width: 90%; /* Adjustable width */
     margin-top: 20px;
     max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
+    overflow: hidden; /* Prevents overflow of child elements */
 }
 
 .profile-img, .mini-profile-img {
-    width: 45%; /* Full width to parent container size */
+    width: 45%; /* Adjusted width to maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
@@ -32,7 +33,7 @@ body {
 .mini-profile-img {
     width: 20%; /* Consistent size */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 20%; /* Circular shape */
+    border-radius: 50%; /* Circular shape */
     display: inline-block; /* Keeps image inline with text */
     vertical-align: top; /* Align top with the text */
 }
@@ -47,11 +48,14 @@ body {
 .mini-bio-container div {
     display: block; /* Stacking for text block */
     width: 70%; /* Text block width */
+    padding: 10px; /* Padding for text block */
 }
 
 .mini-bio-container h3, .mini-bio-container p {
     font-size: 14px; /* Readable font size */
     margin: 5px 0; /* Margin for spacing */
+    text-align: justify; /* Justifies text for even alignment */
+    max-width: 600px; /* Controls maximum width for uniform line length */
 }
 
 .links a {
