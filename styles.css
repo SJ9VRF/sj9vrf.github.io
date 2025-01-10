@@ -19,7 +19,6 @@ body {
     width: 90%; /* Adjustable width */
     margin-top: 20px;
     max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
-    overflow: hidden; /* Prevents overflow of child elements */
 }
 
 .profile-img, .mini-profile-img {
@@ -49,13 +48,17 @@ body {
     display: block; /* Stacking for text block */
     width: 70%; /* Text block width */
     padding: 10px; /* Padding for text block */
+    text-align: justify; /* Justifies text for even alignment */
 }
 
 .mini-bio-container h3, .mini-bio-container p {
     font-size: 14px; /* Readable font size */
     margin: 5px 0; /* Margin for spacing */
-    text-align: justify; /* Justifies text for even alignment */
-    max-width: 600px; /* Controls maximum width for uniform line length */
+}
+
+.bio-text p, .mini-bio-container p {
+    text-align: justify; /* Applies full justification to all paragraphs */
+    hyphens: auto; /* Automatically adds hyphens where necessary */
 }
 
 .links a {
