@@ -22,8 +22,8 @@ body {
 }
 
 .profile-img, .mini-profile-img {
-    width: 150px; /* Fixed width to maintain layout consistency */
-    height: 150px; /* Maintains aspect ratio */
+    width: 250px; /* Fixed width to maintain layout consistency */
+    height: 250px; /* Maintains aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
     margin-bottom: 10px;
