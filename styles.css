@@ -77,9 +77,6 @@ body {
 
 
 
-
-
-
 .mini-bio-container {
     display: flex;
     flex-direction: column; /* Keeps stacking vertically on all screens */
@@ -146,24 +143,3 @@ body {
 }
 
 
-
-
-@media (min-width: 768px) {
-    .mini-bio-container {
-        flex-direction: row; /* Lays out items horizontally on larger screens */
-        align-items: start; /* Aligns items to the top of the container */
-    }
-
-    .mini-profile-img {
-        margin-right: 20px; /* Adds right margin for spacing between image and text */
-    }
-
-    .mini-bio-container div {
-        width: 80%; /* Adjusts text block width when side by side with the image */
-    }
-
-    .links a {
-        display: inline; /* Inline links on larger screens */
-        margin-right: 10px; /* Space between links */
-    }
-}
