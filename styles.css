@@ -22,7 +22,7 @@ body {
 }
 
 .profile-img, .mini-profile-img {
-    width: 100%; /* Full width to parent container size */
+    width: 35%; /* Full width to parent container size */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
@@ -32,7 +32,7 @@ body {
 .mini-profile-img {
     width: 20%; /* Consistent size */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular shape */
+    border-radius: 20%; /* Circular shape */
     display: inline-block; /* Keeps image inline with text */
     vertical-align: top; /* Align top with the text */
 }
