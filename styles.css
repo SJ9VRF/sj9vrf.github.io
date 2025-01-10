@@ -64,17 +64,17 @@ body {
 
 .links {
     width: 100%;
-    text-align: center; /* Ensures the link is centered horizontally */
-    margin-top: auto; /* Keeps the link at the bottom */
-    padding-top: 10px; /* Adds a bit of space above the link */
+    text-align: center;
+    margin-top: auto;
+    padding-top: 10px;
 }
 
 .links a {
     display: block;
     text-decoration: none;
     color: #aaa;
-    font-size: 18px;
-    margin: 0 auto 10px; /* Centers the link and adds spacing at the bottom */
+    font-size: 14px; /* Adjusted font size */
+    margin: 0 auto 10px;
 }
 
 .links a:hover {
@@ -97,7 +97,7 @@ body {
     }
 
     .links a {
-        display: inline; /* Maintains inline display for larger screens */
-        margin-right: 10px; /* Adds space between links */
+        display: inline;
+        margin-right: 10px;
     }
 }
