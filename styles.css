@@ -79,47 +79,47 @@ body {
 
 .mini-bio-container {
     display: flex;
-    flex-direction: column; /* Stacks content vertically within the container */
-    align-items: center; /* Aligns children in the center */
+    flex-direction: column; /* Organizes children vertically */
+    align-items: center; /* Centers all children horizontally */
     background-color: #444;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     width: 90%; /* Adjustable width */
-    max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
+    max-width: 600px; /* Ensures it does not stretch too wide */
     margin-top: 20px;
-    text-align: center; /* Aligns text centrally */
+    text-align: center; /* Ensures text and elements are centered */
 }
 
 .mini-profile-img {
-    width: 100px; /* Fixed size */
+    width: 100px; /* Specific size */
     height: 100px;
     border-radius: 50%;
     border: 3px solid #fff;
-    margin-bottom: 20px; /* Space between image and content */
+    margin-bottom: 20px; /* Adds space between image and content */
 }
 
-.mini-bio-container .content {
-    width: 100%; /* Ensures content fills the container */
+.mini-bio-container > div {
+    width: 100%; /* Ensures the content fills the width of the container */
 }
 
 .links {
-    width: 100%; /* Ensures link block fills the container */
-    margin-top: 10px; /* Space between text content and link */
-    font-size: 14px; /* Smaller font size for the links */
+    width: 100%; /* Full width to ensure alignment in the container */
+    text-align: center; /* Centers the link text */
+    margin-top: 10px; /* Adds space between the paragraph and the link */
+    font-size: 10px; /* Smaller font size for the link */
 }
 
 .links a {
     text-decoration: none; /* No underline */
-    color: #aaa; /* Link color */
-    display: block; /* Link takes the full width of its container */
+    color: #aaa; /* Stylish link color */
+    display: block; /* Ensures the link is treated as a block for alignment */
 }
 
 .links a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #ddd; /* Link hover color */
+    text-decoration: underline; /* Adds underline on hover */
+    color: #ddd; /* Lightens color on hover */
 }
-
 
 
 @media (min-width: 768px) {
