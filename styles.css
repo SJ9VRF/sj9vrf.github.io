@@ -80,52 +80,71 @@ body {
 
 
 
-
-
-
 .mini-bio-container {
     display: flex;
-    flex-direction: column; /* Stacks everything vertically */
-    align-items: center; /* Centers all children */
+    flex-direction: column; /* Keeps stacking vertically on all screens */
+    align-items: center;
     background-color: #444;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    width: 90%; /* Adapts width to parent container */
-    max-width: 600px; /* Limits maximum width */
+    width: 90%;
+    max-width: 600px;
     margin-top: 20px;
-    text-align: center; /* Aligns text in the center */
+    text-align: center;
 }
 
 .mini-profile-img {
-    width: 100px; /* Sets a fixed size */
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 3px solid #fff;
-    margin-bottom: 10px; /* Space below the image */
-}
-
-.mini-bio-container > div {
-    width: 100%; /* Ensures full width usage within container */
+    margin-bottom: 10px;
 }
 
 .links {
-    width: 100%; /* Matches width of the container */
-    text-align: center; /* Ensures link is centered */
-    margin-top: 10px; /* Adds some space above the link */
+    width: 100%; /* Ensures link section takes full width */
+    text-align: center; /* Centers the links */
+    margin-top: auto; /* Pushes the links to the bottom */
 }
 
 .links a {
-    text-decoration: none; /* Removes underline */
-    color: #aaa; /* Sets link color */
-    font-size: 14px; /* Smaller font size for aesthetic differentiation */
-    display: block; /* Block display to enforce new line */
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    display: block; /* Ensures each link is on a new line */
 }
 
 .links a:hover {
-    text-decoration: underline; /* Underline on hover for visual feedback */
-    color: #ddd; /* Changes color on hover */
+    text-decoration: underline;
+    color: #ddd;
 }
+
+@media (min-width: 768px) {
+    .mini-bio-container {
+        flex-direction: row; /* Layout changes to horizontal on larger screens */
+        align-items: start;
+    }
+
+    .mini-profile-img {
+        margin-right: 20px; /* Space between image and text content */
+    }
+
+    .mini-bio-container > div {
+        width: 80%; /* Adjust text width when horizontal */
+    }
+
+    .links {
+        width: 100%; /* Keeps link section width consistent */
+        margin-top: 0; /* Removes additional top margin on larger screens */
+    }
+
+    .links a {
+        display: inline; /* Inline display for horizontal layout */
+        margin-right: 10px; /* Space between inline links */
+    }
+}
+
 
 
 
