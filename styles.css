@@ -12,70 +12,66 @@ body {
 
 .bio-container, .mini-bio-container {
     background-color: #444;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     text-align: center;
-    width: 600px;
+    width: 90%; /* Adjustable width */
     margin-top: 20px;
+    max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
 }
 
 .profile-img, .mini-profile-img {
-    width: 225px;
-    height: 225px;
+    width: 50%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     border: 3px solid #fff;
     margin-bottom: 10px;
+    display: block; /* Center align images */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mini-profile-img {
-    width: 75px; /* 1/3 of the diameter */
-    height: 75px;
+    width: 20%; /* Smaller on smaller screens */
+    height: auto;
     border-radius: 20%;
-    float: left; /* Aligns the image to the left */
-    margin-right: 5px; /* Space between the image and the text */
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-right: 10px; /* Space between the image and the text */
 }
 
 .mini-bio-container div {
-    display: inline-block; /* Keeps title and description next to the image */
-    vertical-align: top; /* Aligns text at the top */
-    width: 480px; /* Adjusted width to fit next to the image */
+    display: block; /* Stack on small screens */
+    width: 100%; /* Full width */
 }
 
-.mini-bio-container h3 {
-    font-size: 14px; /* Smaller font size for titles */
-    margin-top: 0; /* Removes top margin for tighter spacing */
-    margin-bottom: 5px; /* Small margin before the description */
-    color: #ddd; /* Lighter color for visibility */
-}
-
-.mini-bio-container p {
-    font-size: 12px; /* Smaller font size for descriptions */
-    margin: 0; /* Reduces spacing to fit text neatly */
-    color: #ccc;
-}
-
-.bio-text p, .links a {
-    color: #ccc;
-    font-size: 18px;
+.mini-bio-container h3, .mini-bio-container p {
+    font-size: 16px; /* Larger font size for readability */
 }
 
 .links a {
-    text-decoration: none;
-    color: #aaa;
-    margin-right: 10px;
-    font-size: 18px;
+    display: block; /* Each link on a new line */
+    margin-bottom: 10px; /* Space between links */
 }
 
-.links a:hover {
-    text-decoration: underline;
-    color: #ddd;
+@media (min-width: 768px) {
+    .mini-bio-container div {
+        display: inline-block; /* Inline-block on larger screens */
+        vertical-align: top;
+        width: 75%; /* Adjust width next to image */
+    }
+
+    .mini-profile-img {
+        width: 75px; /* Fixed size on larger screens */
+        height: 75px;
+    }
+
+    .bio-container, .mini-bio-container {
+        padding: 40px;
+    }
+
+    .links a {
+        display: inline; /* Links inline on larger screens */
+        margin: 0 10px; /* Space between links */
+    }
 }
-.section-header {
-    font-size: 20px; /* Larger font size for visibility and emphasis */
-    color: #ddd; /* Light gray color to match the overall design */
-    margin-top: 35px; /* Space above the section header */
-    margin-bottom: 0px; /* Reduced space before the project squares */
-}
+
