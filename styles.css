@@ -75,6 +75,54 @@ body {
     color: #ddd; /* Link hover color */
 }
 
+
+
+
+.mini-bio-container {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    align-items: center; /* Centers the content */
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 90%; /* Adjustable width */
+    max-width: 600px; /* Ensures it does not stretch too wide on larger screens */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mini-profile-img {
+    width: 100px; /* Appropriate size for the image */
+    height: 100px; /* Maintain aspect ratio */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+}
+
+.mini-bio-container div {
+    width: 100%; /* Utilizes full width for content alignment */
+    margin-bottom: 10px; /* Spacing between elements */
+}
+
+.links {
+    width: 100%; /* Full width to match the parent container */
+    text-align: center; /* Centers the link */
+}
+
+.links a {
+    text-decoration: none; /* No underline */
+    color: #aaa; /* Link color */
+    font-size: 18px; /* Size of the link text */
+    display: inline-block; /* Ensures the link is centered */
+}
+
+.links a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #ddd; /* Link hover color */
+}
+
+
 @media (min-width: 768px) {
     .mini-bio-container {
         flex-direction: row; /* Lays out items horizontally on larger screens */
