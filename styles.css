@@ -83,6 +83,7 @@ body {
 }
 
 .section-header {
+    margin-top: 20px; /* Reduce this value or set it to 0 */
     margin-bottom: 0px; /* Reduce this value or set it to 0 */
 }
 
