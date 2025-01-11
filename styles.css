@@ -82,6 +82,11 @@ body {
     color: #ddd;
 }
 
+.section-header {
+    margin-bottom: 5px; /* Reduce this value or set it to 0 */
+}
+
+
 @media (min-width: 768px) {
     .mini-bio-container {
         flex-direction: row;
