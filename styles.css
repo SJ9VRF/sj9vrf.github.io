@@ -44,37 +44,26 @@ body {
     align-items: center;
     text-align: left;
     margin-bottom: 20px;
-}
-
-.mini-bio-container div {
     width: 100%;
 }
 
-.mini-bio-container h3, .mini-bio-container p {
-    text-align: justify;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.bio-text p, .mini-bio-container p {
-    hyphens: auto;
-    margin: 10px 0;
+.mini-bio-container > div {
+    width: 100%;
+    margin-bottom: 10px; /* Adds spacing between text content and links */
 }
 
 .links {
     width: 100%;
     text-align: center;
-    margin-top: auto;
-    padding-top: 10px;
+    margin-top: 10px; /* Adds spacing above links */
 }
 
 .links a {
     display: block;
     text-decoration: none;
     color: #aaa;
-    font-size: 14px; /* Adjusted font size */
-    margin: 0 auto 10px;
+    font-size: 14px;
+    margin: 5px 0; /* Adds spacing between links */
 }
 
 .links a:hover {
@@ -82,28 +71,21 @@ body {
     color: #ddd;
 }
 
-.section-header {
-    margin-top: 20px; /* Reduce this value or set it to 0 */
-    margin-bottom: 0px; /* Reduce this value or set it to 0 */
-}
-
-
 @media (min-width: 768px) {
     .mini-bio-container {
         flex-direction: row;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .mini-profile-img {
         margin-right: 20px;
     }
 
-    .mini-bio-container div {
+    .mini-bio-container > div {
         width: 80%;
     }
 
-    .links a {
-        display: inline;
-        margin-right: 0px;
+    .links {
+        margin-top: 0; /* Reset margin for larger screens */
     }
 }
